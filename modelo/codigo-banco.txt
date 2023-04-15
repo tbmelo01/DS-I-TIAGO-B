@@ -1,0 +1,13 @@
+Nome do banco de dados: dbaula
+
+create table tbContato(
+    idContato int PRIMARY key AUTO_INCREMENT,
+    nomeContato varchar(40),
+    emailContato varchar(40),
+    assuntoContato varchar(400),
+    mensagemContato varchar(2000)    
+);
+
+insert into tbContato values(null,'João','joao@gmail.com','assunto do joao','mensagem do joao');
+insert into tbContato values(null,'Maria','maria@gmail.com','assunto da maria','mensagem da maria');
+insert into tbContato values(null,'Ana','ana@gmail.com','assunto da ana','mensagem da ana');
