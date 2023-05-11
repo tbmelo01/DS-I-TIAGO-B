@@ -1,0 +1,67 @@
+
+*{
+    color: black;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    
+}
+body{
+    
+    margin:auto;
+    background-image: linear-gradient(to bottom, #494949, #000000);
+    background-attachment: fixed;
+    padding: 8px;
+    text-shadow: 2px 2px 3px #60ac0a;
+    text-align: center;
+}
+#logo{
+    margin: auto;
+    width:500px;
+
+
+}
+nav{
+   
+    border:3px solid black;
+    border-radius: 30px;
+}
+ul{
+    justify-content: space-around;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    list-style-type: '\2714\0020\0020';
+    columns: 5;
+    list-style-position: inside;
+    padding: 10px;
+}
+input{
+    border:2px solid black;
+    border-radius: 10px;
+}
+textarea{
+    border:2px solid black;
+    border-radius: 10px; 
+}
+
+footer p{
+    color: #60ac0a;
+    text-shadow: 2px 2px 3px #080808;
+    text-align: center;
+    padding-top: 300px;
+}
+.img{margin-top: 5%;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+/*fronte e index
+ tabela de filmes, 
+ rotina de consulta inserção, consulta e excluçao dos filmes e clientes*/
+
+ 
