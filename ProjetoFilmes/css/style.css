@@ -1,7 +1,6 @@
 
 *{
     color: black;
-    
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     
@@ -12,56 +11,129 @@ body{
     background-image: linear-gradient(to bottom, #494949, #000000);
     background-attachment: fixed;
     padding: 8px;
-    text-shadow: 2px 2px 3px #60ac0a;
+    text-shadow: 2px 2px 3px #86fc00;
     text-align: center;
 }
 #logo{
     margin: auto;
-    width:500px;
+    width:100%;
+    height: 300px;
 
-
+}
+section{
+    text-align: flex;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.filme{
+   
+    text-align: flex;
+    max-width: 500px;
+    margin: 15px;
+}
+.filme>p  {
+    color: #9da09a;
+    text-shadow: none;
+}
+.filme iframe{
+    width: 70%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.subtitulo{
+    text-align: justify;
+    padding-top: 30px;
+}
+.filme2{
+    /* background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%); */
+    text-align: flex;
+    max-width: 500px;
+    margin: 15px;
+}
+.filme2 iframe{
+    width: 70%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.filme2>p  {
+    color: #9da09a;
+    text-shadow: none;
 }
 nav{
-   
+    margin-bottom: 30px;
+    text-decoration: none;
     border:3px solid black;
     border-radius: 30px;
-}
-ul{
-    justify-content: space-around;
     display: flex;
+}
+
+
+ul{
     font-size: 20px;
     font-weight: bold;
     color: black;
+
     list-style-type: '\2714\0020\0020';
-    columns: 5;
+    columns: 3;
     list-style-position: inside;
     padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
-input{
-    border:2px solid black;
+
+input[type=text],input[type=email],input[type=number]{
+    width: 90vh;
+    height: 30px;
+    display: flex;
+    /* padding-top:1px ; */
+    margin:4px;
+    border:2px bold black;
     border-radius: 10px;
+    background: #e9e5e5; 
+    color: #000000;
+
 }
+
+
 textarea{
-    border:2px solid black;
+    width: 90vh;
+    height: 30px;
+    display: flex;
+    margin:auto;
+    border:2px bold black;
     border-radius: 10px; 
+    background: #e9e5e5;
 }
+
+
 
 footer p{
-    color: #60ac0a;
+    color: #86fc00;
     text-shadow: 2px 2px 3px #080808;
     text-align: center;
-    padding-top: 300px;
+    padding-top: 200px;
+    
 }
-.img{margin-top: 5%;
-}
-.content{
-    display: flex;
-    justify-content: space-around;
+.botao{
+    /* flex-direction:inherit; */
+    padding: 10px 30px ;
+    margin-top:10px ;
+    border-radius: 20px;
 
 }
+.botao:hover{
+    background-color: #87dd25
+}
 
-/*fronte e index
- tabela de filmes, 
- rotina de consulta inserção, consulta e excluçao dos filmes e clientes*/
+.fundo{
+    margin: 10px;
+}
+
+
+
 
  

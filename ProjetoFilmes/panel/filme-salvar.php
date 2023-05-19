@@ -1,14 +1,12 @@
 <?php 
-    //print_r($_POST);die;
-    
     $link = $_POST['txtLink'];
-    $titulo = $_POST['txtTitulo'];
-    $diretor = $_POST['txtDiretor'];
-    $genero = $_POST['txtIdGenero'];
-    $descricao = $_POST['txtDescricao'];
-
+    $titulo = $_POST['txTitulo'];
+    $diretor = $_POST['txDiretor'];
+    $genero = $_POST['txIdGenero'];
+    $descricao = $_POST['txDescricao'];
+        
     include("conexao.php");
-    
+
     $stmt = $pdo->prepare("insert into tbfilme values(null,'$link','$titulo','$diretor','$genero','$descricao')");	    
 	$stmt ->execute();    
 
