@@ -1,0 +1,14 @@
+create table tbGenero(
+	idGenero int primary key auto_increment,
+	genero varchar(40)
+);
+
+create table tbFilme(
+	idFilme int primary key auto_increment,
+	filme varchar(100),
+	idGenero int,
+	foreign key (idGenero) references tbGenero(idGenero)
+);
+
+insert into tbgenero values (null,'Comédia'),(null,'Ação');
+insert into tbfilme values (null,'Guardiões das galáxia',2);
