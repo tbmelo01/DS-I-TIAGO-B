@@ -8,7 +8,8 @@
 body{
     
     margin:auto;
-    background-image: linear-gradient(to bottom, #494949, #000000);
+    background: linear-gradient(#141e30, #243b55);
+    /* background-image: linear-gradient(to bottom, #494949, #000000); */
     background-attachment: fixed;
     padding: 8px;
     text-shadow: 2px 2px 3px #86fc00;
@@ -86,6 +87,8 @@ ul{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    
+   
 }
 
 input[type=text],input[type=email],input[type=number]{
@@ -135,6 +138,8 @@ footer p{
 .fundo{
     margin: 10px;
 }
+
+
 
 
 

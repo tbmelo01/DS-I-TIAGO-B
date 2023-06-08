@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 20-Maio-2023 às 01:20
--- Versão do servidor: 5.7.36
--- versão do PHP: 7.4.26
+-- Tempo de geração: 08-Jun-2023 às 19:10
+-- Versão do servidor: 8.0.31
+-- versão do PHP: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,12 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `tbcargo`
+--
+
+DROP TABLE IF EXISTS `tbcargo`;
+CREATE TABLE IF NOT EXISTS `tbcargo` (
+  `idcargo` int NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(150) DEFAULT NULL,
+  `adimin` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`idcargo`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `tbcontato`
 --
 
 DROP TABLE IF EXISTS `tbcontato`;
 CREATE TABLE IF NOT EXISTS `tbcontato` (
-  `idContato` int(11) NOT NULL AUTO_INCREMENT,
+  `idContato` int NOT NULL AUTO_INCREMENT,
   `nomeContato` varchar(40) DEFAULT NULL,
   `emailContato` varchar(40) DEFAULT NULL,
   `assuntoContato` varchar(400) DEFAULT NULL,
@@ -53,14 +67,14 @@ INSERT INTO `tbcontato` (`idContato`, `nomeContato`, `emailContato`, `assuntoCon
 
 DROP TABLE IF EXISTS `tbfilme`;
 CREATE TABLE IF NOT EXISTS `tbfilme` (
-  `idFilme` int(11) NOT NULL AUTO_INCREMENT,
+  `idFilme` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(100) DEFAULT NULL,
   `diretor` varchar(50) DEFAULT NULL,
   `duracao` varchar(50) NOT NULL,
   `descricao` varchar(500) DEFAULT NULL,
   `classificacao` varchar(100) NOT NULL,
   `ano` varchar(50) NOT NULL,
-  `idGenero` int(11) DEFAULT NULL,
+  `idGenero` int DEFAULT NULL,
   `link` varchar(1000) NOT NULL,
   `img` varchar(1000) NOT NULL,
   PRIMARY KEY (`idFilme`),
@@ -86,7 +100,7 @@ INSERT INTO `tbfilme` (`idFilme`, `titulo`, `diretor`, `duracao`, `descricao`, `
 
 DROP TABLE IF EXISTS `tbgenero`;
 CREATE TABLE IF NOT EXISTS `tbgenero` (
-  `idGenero` int(11) NOT NULL AUTO_INCREMENT,
+  `idGenero` int NOT NULL AUTO_INCREMENT,
   `genero` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`idGenero`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
@@ -109,6 +123,28 @@ INSERT INTO `tbgenero` (`idGenero`, `genero`) VALUES
 (11, 'Romance'),
 (12, 'Suspence'),
 (13, 'Terror');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbusuario`
+--
+
+DROP TABLE IF EXISTS `tbusuario`;
+CREATE TABLE IF NOT EXISTS `tbusuario` (
+  `idUsuario` int NOT NULL AUTO_INCREMENT,
+  `emailUsuario` varchar(40) DEFAULT NULL,
+  `senhaUsuario` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `tbusuario`
+--
+
+INSERT INTO `tbusuario` (`idUsuario`, `emailUsuario`, `senhaUsuario`) VALUES
+(1, 'admin', 'admin'),
+(2, 'tiago', '123456');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
