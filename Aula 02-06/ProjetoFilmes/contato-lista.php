@@ -20,8 +20,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Assunto</th>
-                <th scope="col">Mensagem</th>
-                <th scope="col">Ações</th>			
+                <th scope="col">Mensagem</th>			
             </tr>
             </thead>
             <tbody>
@@ -35,10 +34,7 @@
                         echo "<td> $row[1] </td>";						
                         echo "<td> $row[2] </td>";						
                         echo "<td> $row[3] </td>";											
-                        echo "<td> $row[4] </td>";
-                        echo "<td>
-                         <a href ='contato-remover.php?id= $row[0]'> Remover </a>
-                          </td>";				
+                        echo "<td> $row[4] </td>";					
                     echo "</tr>";
                 }	
             ?>
@@ -46,7 +42,30 @@
         </table>
     </section>
 
-
-   
+    <div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div>
+<div class="alert alert-secondary" role="alert">
+  A simple secondary alert—check it out!
+</div>
+<div class="alert alert-success" role="alert">
+  A simple success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  A simple danger alert—check it out!
+</div>
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
+<div class="alert alert-info" role="alert">
+  A simple info alert—check it out!
+</div>
+<div class="alert alert-light" role="alert">
+  A simple light alert—check it out!
+</div>
+<div class="alert alert-dark" role="alert">
+  A simple dark alert—check it out!
+</div>
+    
 </body>
 </html>

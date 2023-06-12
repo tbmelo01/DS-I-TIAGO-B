@@ -9,5 +9,5 @@
     $stmt = $pdo->prepare("insert into tbcontato values(null,'$nome','$email','$assunto','$mensagem')");	    
 	$stmt ->execute();    
 
-    header("location:contato");    
+    header("location:contato.php");    
 ?>

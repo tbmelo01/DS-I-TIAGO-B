@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DarkMovies</title>
+    <title>Projeto Filmes</title>
 
     <link rel="stylesheet" href="css/style.css">
     
@@ -12,9 +12,9 @@
 <body>
 <header>
 
-   
-      <img id="logo" src="img/Dark1.png" alt="logo">  
-     
+    <picture id="logo">
+      <img src="img/logo.png" alt="logo">  
+    </picture> 
         <?php include('menu.php'); ?>
     </header>
     

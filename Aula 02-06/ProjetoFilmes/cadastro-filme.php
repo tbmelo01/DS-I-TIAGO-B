@@ -3,26 +3,22 @@
 
 <section>
 
-            <form  class="form" action="filme-salvar.php" method="post">      
-                  
-            
-                <div class="fundo">
-                    <textarea type="url" placeholder="Link" name="txtLink"></textarea>
-                </div>	
-                <div class="fundo">
-                    <input type="text" placeholder="Título" name="txtTitulo" />
+            <form action="filme-salvar.php" method="post">      
+                   
+                <div>
+                    <input type="text" placeholder="Título" name="txTitulo" />
                 </div>		
-                <div class="fundo">
-                    <input type="text" placeholder="Diretor" name="txtDiretor"/>
+                <div>
+                    <input type="text" placeholder="Autor" name="txAutor" required="required"/>
                 </div>		
-                <div class="fundo">
-                    <input type="number" placeholder="Genero" name="txtIdGenero" />
+                <div>
+                    <input type="text" placeholder="Genero" name="txIdGenero" />
                 </div>		
-                <div class="fundo">
-                    <textarea placeholder="Descrição" name="txtDescricao"></textarea>
+                <div>
+                    <textarea placeholder="Descrição" name="txDescricao"></textarea>
                 </div>
-                <div class="fundo">
-                    <input class="botao" type="submit" value="Salvar" />
+                <div>
+                    <input type="submit" value="Salvar" />
                 </div>
             </form>
             

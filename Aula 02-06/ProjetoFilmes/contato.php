@@ -3,20 +3,20 @@
 <section>
 
             <form action="contato-salvar.php" method="post">      
-                <div class="fundo">
-                    <input type="text" placeholder="Nome" name="txNome" required/>
+                <div>
+                    <input type="text" placeholder="Nome" name="txNome" />
                 </div>		
-                <div class="fundo">
-                    <input type="email" placeholder="E-mail" name="txEmail" required/>
+                <div>
+                    <input type="text" placeholder="E-mail" name="txEmail" required="required"/>
                 </div>		
-                <div class="fundo">
-                    <input type="text" placeholder="Assunto" name="txAssunto" required/>
+                <div>
+                    <input type="text" placeholder="Assunto" name="txAssunto" />
                 </div>		
-                <div class="fundo">
-                    <textarea placeholder="Mensagem" name="txMensagem" required></textarea>
+                <div>
+                    <textarea placeholder="Mensagem" name="txMensagem"></textarea>
                 </div>
-                <div class="fundo">
-                    <input class="botao" type="submit" value="Salvar" />
+                <div>
+                    <input type="submit" value="Salvar" />
                 </div>
             </form>
             
