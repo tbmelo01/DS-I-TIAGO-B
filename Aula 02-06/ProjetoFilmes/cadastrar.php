@@ -1,5 +1,3 @@
-<?php include('cabecalho.php'); ?>
-
 <section>
 
             <form action="contato-salvar.php" method="post">      
@@ -21,5 +19,3 @@
             </form>
             
         </section>
-
-<?php include ('rodape.php'); ?>

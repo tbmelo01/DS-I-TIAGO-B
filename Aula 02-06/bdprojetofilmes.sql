@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 14-Jun-2023 às 01:07
--- Versão do servidor: 8.0.31
+-- Tempo de geração: 15-Jun-2023 às 01:09
+-- Versão do servidor: 5.7.40
 -- versão do PHP: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `tbadmin`;
 CREATE TABLE IF NOT EXISTS `tbadmin` (
-  `idAdmin` int NOT NULL AUTO_INCREMENT,
+  `idAdmin` int(11) NOT NULL AUTO_INCREMENT,
   `emailAdmin` varchar(40) DEFAULT NULL,
   `senhaAdmin` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idAdmin`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `tbadmin`
@@ -51,11 +51,11 @@ INSERT INTO `tbadmin` (`idAdmin`, `emailAdmin`, `senhaAdmin`) VALUES
 
 DROP TABLE IF EXISTS `tbcargo`;
 CREATE TABLE IF NOT EXISTS `tbcargo` (
-  `idcargo` int NOT NULL AUTO_INCREMENT,
-  `usuario` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `adimin` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `idcargo` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(150) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `adimin` varchar(150) CHARACTER SET utf8mb4 DEFAULT NULL,
   PRIMARY KEY (`idcargo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `tbcargo` (
 
 DROP TABLE IF EXISTS `tbcontato`;
 CREATE TABLE IF NOT EXISTS `tbcontato` (
-  `idContato` int NOT NULL AUTO_INCREMENT,
+  `idContato` int(11) NOT NULL AUTO_INCREMENT,
   `nomeContato` varchar(40) DEFAULT NULL,
   `emailContato` varchar(40) DEFAULT NULL,
   `assuntoContato` varchar(400) DEFAULT NULL,
@@ -89,14 +89,14 @@ INSERT INTO `tbcontato` (`idContato`, `nomeContato`, `emailContato`, `assuntoCon
 
 DROP TABLE IF EXISTS `tbfilme`;
 CREATE TABLE IF NOT EXISTS `tbfilme` (
-  `idFilme` int NOT NULL AUTO_INCREMENT,
+  `idFilme` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(100) DEFAULT NULL,
   `diretor` varchar(50) DEFAULT NULL,
   `duracao` varchar(50) NOT NULL,
   `descricao` varchar(500) DEFAULT NULL,
   `classificacao` varchar(100) NOT NULL,
   `ano` varchar(50) NOT NULL,
-  `idGenero` int DEFAULT NULL,
+  `idGenero` int(11) DEFAULT NULL,
   `link` varchar(1000) NOT NULL,
   `img` varchar(1000) NOT NULL,
   `secao` varchar(50) NOT NULL,
@@ -129,7 +129,7 @@ INSERT INTO `tbfilme` (`idFilme`, `titulo`, `diretor`, `duracao`, `descricao`, `
 
 DROP TABLE IF EXISTS `tbgenero`;
 CREATE TABLE IF NOT EXISTS `tbgenero` (
-  `idGenero` int NOT NULL AUTO_INCREMENT,
+  `idGenero` int(11) NOT NULL AUTO_INCREMENT,
   `genero` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`idGenero`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
@@ -161,12 +161,12 @@ INSERT INTO `tbgenero` (`idGenero`, `genero`) VALUES
 
 DROP TABLE IF EXISTS `tbusuario`;
 CREATE TABLE IF NOT EXISTS `tbusuario` (
-  `idUsuario` int NOT NULL AUTO_INCREMENT,
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
   `emailUsuario` varchar(40) DEFAULT NULL,
   `senhaUsuario` varchar(255) DEFAULT NULL,
-  `tipoUsuario` int NOT NULL,
+  `tipoUsuario` int(11) NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `tbusuario`
