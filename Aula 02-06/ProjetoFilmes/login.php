@@ -30,9 +30,9 @@
     </a>
 
   </form>
-  <form action="cadastrar.php" method="post">
+  <form action="" method="post">
 
-   <a href="">
+   <a href="cadastrar.php"  >
     <input class="opacit" type="submit" value="Cadastre-se" > cadastrar
    </a>
   </form>

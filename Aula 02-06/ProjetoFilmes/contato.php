@@ -1,7 +1,7 @@
 <?php include('cabecalho.php'); ?>
 
 <section>
-
+    
             <form action="contato-salvar.php" method="post">      
                 <div class="fundo">
                     <input type="text" placeholder="Nome" name="txNome" required/>

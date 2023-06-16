@@ -42,6 +42,17 @@ section{
     justify-content:space-evenly;
     margin-top: 80px;
 }
+.formula {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+}
+
+.ajuste{
+   font-size: 4em;
+   
+}
+
 .filme{
     background-color: rgba(0, 0, 0, 0.418);
     text-align: flex;
@@ -177,6 +188,7 @@ footer p{
 }
 .botao:hover{
     background-color: #03e9f4
+    color fff
 }
 
 .fundo{

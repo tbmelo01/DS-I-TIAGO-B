@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 16-Jun-2023 às 01:23
--- Versão do servidor: 5.7.36
--- versão do PHP: 7.4.26
+-- Tempo de geração: 14-Jun-2023 às 01:07
+-- Versão do servidor: 8.0.31
+-- versão do PHP: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,12 +24,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `tbadmin`
+--
+
+DROP TABLE IF EXISTS `tbadmin`;
+CREATE TABLE IF NOT EXISTS `tbadmin` (
+  `idAdmin` int NOT NULL AUTO_INCREMENT,
+  `emailAdmin` varchar(40) DEFAULT NULL,
+  `senhaAdmin` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idAdmin`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Extraindo dados da tabela `tbadmin`
+--
+
+INSERT INTO `tbadmin` (`idAdmin`, `emailAdmin`, `senhaAdmin`) VALUES
+(1, 'anaadmin', '1234'),
+(2, 'tiagoadmin', '123456');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tbcargo`
+--
+
+DROP TABLE IF EXISTS `tbcargo`;
+CREATE TABLE IF NOT EXISTS `tbcargo` (
+  `idcargo` int NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `adimin` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`idcargo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `tbcontato`
 --
 
 DROP TABLE IF EXISTS `tbcontato`;
 CREATE TABLE IF NOT EXISTS `tbcontato` (
-  `idContato` int(11) NOT NULL AUTO_INCREMENT,
+  `idContato` int NOT NULL AUTO_INCREMENT,
   `nomeContato` varchar(40) DEFAULT NULL,
   `emailContato` varchar(40) DEFAULT NULL,
   `assuntoContato` varchar(400) DEFAULT NULL,
@@ -53,14 +89,14 @@ INSERT INTO `tbcontato` (`idContato`, `nomeContato`, `emailContato`, `assuntoCon
 
 DROP TABLE IF EXISTS `tbfilme`;
 CREATE TABLE IF NOT EXISTS `tbfilme` (
-  `idFilme` int(11) NOT NULL AUTO_INCREMENT,
+  `idFilme` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(100) DEFAULT NULL,
   `diretor` varchar(50) DEFAULT NULL,
   `duracao` varchar(50) NOT NULL,
   `descricao` varchar(500) DEFAULT NULL,
   `classificacao` varchar(100) NOT NULL,
   `ano` varchar(50) NOT NULL,
-  `idGenero` int(11) DEFAULT NULL,
+  `idGenero` int DEFAULT NULL,
   `link` varchar(1000) NOT NULL,
   `img` varchar(1000) NOT NULL,
   `secao` varchar(50) NOT NULL,
@@ -93,7 +129,7 @@ INSERT INTO `tbfilme` (`idFilme`, `titulo`, `diretor`, `duracao`, `descricao`, `
 
 DROP TABLE IF EXISTS `tbgenero`;
 CREATE TABLE IF NOT EXISTS `tbgenero` (
-  `idGenero` int(11) NOT NULL AUTO_INCREMENT,
+  `idGenero` int NOT NULL AUTO_INCREMENT,
   `genero` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`idGenero`)
 ) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
@@ -125,24 +161,20 @@ INSERT INTO `tbgenero` (`idGenero`, `genero`) VALUES
 
 DROP TABLE IF EXISTS `tbusuario`;
 CREATE TABLE IF NOT EXISTS `tbusuario` (
-  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `idUsuario` int NOT NULL AUTO_INCREMENT,
   `emailUsuario` varchar(40) DEFAULT NULL,
   `senhaUsuario` varchar(255) DEFAULT NULL,
-  `tipoUsuario` int(11) NOT NULL,
-  `sobrenome` varchar(60) NOT NULL,
-  `nome` varchar(60) NOT NULL,
+  `tipoUsuario` int NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `tbusuario`
 --
 
-INSERT INTO `tbusuario` (`idUsuario`, `emailUsuario`, `senhaUsuario`, `tipoUsuario`, `sobrenome`, `nome`) VALUES
-(1, 'admin', 'admin', 1, '', ''),
-(2, 'tiago', '123456', 2, '', ''),
-(3, 'asdasb@gmail.com', '123', 2, 'sfasfdas', 'tiago'),
-(4, 'orlando@gmail.com', '1234', 2, 'professor', 'orlando');
+INSERT INTO `tbusuario` (`idUsuario`, `emailUsuario`, `senhaUsuario`, `tipoUsuario`) VALUES
+(1, 'admin', 'admin', 1),
+(2, 'tiago', '123456', 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
